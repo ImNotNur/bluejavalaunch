@@ -1,4 +1,4 @@
-Here is the fully polished, updated README.md for your repo (ImNotNur/bluejavalaunch) incorporating your new icon concept, your custom branding, and the electric blue theme:
+
 <div align="center">
   <h1>BlueJavaLaunch 🔵</h1>
   <p>
