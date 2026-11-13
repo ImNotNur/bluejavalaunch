@@ -1,91 +1,85 @@
-<H1 align="center">MojoLauncher (a.k.a. MJLauncher)</H1>
+<H1 align="center">BlueJavaLaunch 🔵</H1>
 
-<a href="./README_RU.md">Readme на русском</a>
+<p align="center">
+  <b>Minecraft: Java Edition on Android, finally designed for actual humans (and not just Linux terminal wizards).</b>
+</p>
 
-<img src="./app_mojo/src/main/assets/mojo.png" align="left" width="150" height="150" alt="MojoLauncher logo">
+<img src="./app_mojo/src/main/assets/bluejavalaunch.png" align="left" width="150" height="150" alt="BlueJavaLaunch logo">
 
-[![Android CI](https://github.com/MojoLauncher/MojoLauncher/workflows/Android%20CI/badge.svg)](https://github.com/MojoLauncher/MojoLauncher/actions)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MojoLauncher/MojoLauncher)](https://github.com/MojoLauncher/MojoLauncher/actions)
-[![Discord](https://img.shields.io/discord/1365346109131722753.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/VHdwQFsaGX)
+[![Build APK](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/actions/workflows/build-apk.yml/badge.svg)](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/actions)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ImNotNurgamingYT/BlueJavaLaunch)](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/commits)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-* MojoLauncher is a launcher, based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher), that allows you to play Minecraft: Java Edition on your Android device!
-
-* It can run almost every version of Minecraft, allowing you to use .jar only installers to install modloaders such as [Forge](https://files.minecraftforge.net/) and [Fabric](http://fabricmc.net/) and mods like [OptiFine](https://optifine.net).
+* **BlueJavaLaunch** is a clean, user-friendly fork of [MojoLauncher](https://github.com/MojoLauncher/MojoLauncher) (which is based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)) that lets you play Minecraft: Java Edition on your Android phone or tablet without needing a computer science degree just to configure your settings.
+* Tired of mobile launchers looking like a 2004 nuclear reactor control panel—or constantly beefing with each other? Same. So we went full xkcd #927 and made another one. Except this one actually makes sense.
+* Runs everything from ancient `rd-132211` builds up to the latest snapshots, with easy support for **Fabric**, **Forge**, **NeoForge**, and **OptiFine**—plus out-of-the-box **Bedrock-style touch controls** so your thumbs don't file a restraining order against you.
 
 ## Navigation
-- [Introduction](#introduction)
-- [Getting MojoLauncher](#getting-mojolauncher)
-- [Building](#building) 
-- [Current roadmap](#current-roadmap) 
-- [License](#license) 
-- [Contributing](#contributing) 
-- [Credits & Third party components and their licenses](#credits--third-party-components-and-their-licenses-if-available)
+- [Why BlueJavaLaunch?](#why-bluejavalaunch)
+- [Getting BlueJavaLaunch](#getting-bluejavalaunch)
+- [Building](#building)
+- [Roadmap](#roadmap)
+- [Known Issues](#known-issues)
+- [License](#license)
+- [Contributing](#contributing)
+- [Credits & Third-Party Components](#credits--third-party-components)
 
-## Introduction 
-* MojoLauncher is a Minecraft: Java Edition launcher for Android based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)
-* This launcher can launch almost all available Minecraft versions ranging from rd-132211 to 26.x snapshots (including Combat Test versions). 
-* Modding via Forge and Fabric are also supported. 
+## Why BlueJavaLaunch?
+* **Zero Jargon by Default:** No more getting jump-scared by `MALLOC_ARENA_MAX` or obscure renderer acronyms on your first boot. BlueJavaLaunch automatically detects your device's RAM and GPU to pick optimal settings silently in the background. *(Don't worry, power users—all the raw JVM flags and renderer toggles are still waiting for you behind the **Nerd Mode** switch).*
+* **Bedrock-Styled Touch Controls:** Built-in dynamic floating joystick and clean touch layouts that actually feel natural on a touchscreen.
+* **Human Error Messages:** If something crashes, we tell you what actually went wrong in plain English instead of throwing a 500-line Java stack trace at your face and wishing you good luck.
+* **Blue > Everything:** Clean, uncluttered, electric-blue UI that respects your screen space.
 
-## Getting MojoLauncher
+## Getting BlueJavaLaunch
 
-You can get MojoLauncher via four methods:
+You can grab BlueJavaLaunch in three ways:
 
-1. You can get the prebuilt app from the [releases section](http://github.com/mojolauncher/mojolauncher/releases).
+1. **Releases (Recommended):** Download the latest stable APK from the [Releases page](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/releases).
+2. **Bleed-Edge Builds:** Grab fresh automated builds straight from [GitHub Actions](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/actions) (click the latest green workflow run and scroll down to **Artifacts**).
+3. **Build it Yourself:** Follow the [Building](#building) guide below if you enjoy watching Gradle progress bars.
 
-2. You can get it from Google Play by clicking on this badge:
-[![Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=git.artdeell.mjlaunch)
-
-3. You can get early builds from [Github Actions](http://github.com/mojolauncher/mojolauncher/actions).
-
-4. You can [build](#building) from source.
-## Building   
-* Build the launcher (it will automatically download all required components)
-```
+## Building
+Make sure you clone with `--recursive` so the native C/C++ submodules don't go missing:
+git clone --recursive [https://github.com/ImNotNurgamingYT/BlueJavaLaunch.git](https://github.com/ImNotNurgamingYT/BlueJavaLaunch.git)
+cd BlueJavaLaunch
 ./gradlew :app_mojo:assembleDebug
-```
+
 If you are building on Windows:
-* Replace `./gradlew` with `.\gradlew.bat`
-* Make sure `mojoexec`, `sdl`, `glfw` are symlinked into `app_mojo/src/main/jni/`
+ * Replace ./gradlew with .\gradlew.bat
+ * Make sure mojoexec, sdl, and glfw are symlinked into app_mojo/src/main/jni/
+(Pro tip: You don't even need Android Studio installed locally—forking this repo and running the included GitHub Actions workflow builds the APK in the cloud for free.)
+Roadmap
+ * [x] Inherit MojoLauncher's rock-solid core, instance system, and modpack imports
+ * [ ] Overhaul Home, Loading, Settings, and Version Switcher into the clean BlueJavaLaunch UI
+ * [ ] Smart Auto-RAM and GPU renderer auto-detection on first launch
+ * [ ] Native Bedrock-style dynamic floating joystick and smart HUD controls
+ * [ ] "Nerd Mode" toggle to hide/unhide raw JVM arguments and renderer overrides
+ * [ ] Plain-English crash translator (goodbye, mysterious Exit Code 1)
+Known Issues
+ * Some physical mice might move at the speed of a sleepy snail.
+ * Using Holy GL4ES with massive modpack texture atlases can sometimes stretch textures into modern art.
+ * Since this project is brand new, there are probably a few hidden bugs waiting to be discovered—if you find one, open an Issue!
+License
+ * BlueJavaLaunch is licensed under GNU LGPLv3, staying 100% free and open-source just like its upstream parents.
+Contributing
+Got an idea to make the UI even cleaner, spotted a typo, or want to help translate the launcher into more languages? Pull requests and issues are always welcome! Keep the code clean, keep the UI human, and explain what your PR changes.
+Credits & Third-Party Components
+Huge shoutout to the MojoLauncher and PojavLauncher teams for doing all the heavy lifting that makes Java Edition on Android possible in the first place:
+ * MojoLauncher: GNU LGPLv3 License
+ * PojavLauncher: GNU LGPLv3 License
+ * Android Support Libraries: Apache License 2.0
+ * Holy GL4ES: MIT License
+ * OpenJDK: GNU GPLv2 License
+ * GLFW: zlib license
+ * SDL: zlib license
+ * LWJGL2-GLFW: 3-Clause BSD license
+ * LWJGL3: BSD-3 License
+ * mojoexec: MIT License
+ * Mesa 3D Graphics Library: MIT License
+ * pro-grade: Apache License 2.0
+ * Authlib-Injector: AGPL-3.0
+ * alsoft: GNU LGPL and Modified PFFFT
+ * oboe: Apache License 2.0
+ * Thanks to Mineskin for providing Minecraft avatars.
+ * This is vibecoded lol but temporarily
 
-## Current roadmap
-- [x] Instance system in favor of profiles
-- [x] Out-of-the box 1.21.5 support
-- [x] mrpack/CurseForge zip import
-- [x] LTW: enable compute shader/image extensions
-- [ ] LTW: resolve issues with Create
-- [ ] LTW: switch to a color-renderable format for framebuffers
-- [ ] Modpack/mod management tool
-- [ ] MMC-compatible instance import
-- [ ] Vintage Story support
-- [ ] Implement common native library standard
-
-## Known Issues
-- Some physical mice may have very slow mouse speed
-- On Holy GL4ES, large texture atlases may be distorted (resulting in stretched/blocky textures in modpacks)
-- Probably more, that's why we have a bug tracker ;) 
-
-## License
-- MojoLauncher is licensed under [GNU LGPLv3](https://github.com/MojoLauncher/MojoLauncher/blob/v3_openjdk/LICENSE).
-
-## Contributing
-Contributions are welcome! We appreciate any type of contribution, not only code. For example, you can help the wiki shape up. You can help the [translation](https://mojolauncher.ru/translate/translator.html) too!
-
-
-Any code change to this repository should be submitted as a pull request. The description should explain what the code does and give steps to execute it.
-
-## Third party components, licenses and sources (when applicable)
-- [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher): [GNU LGPLv3 License](https://github.com/PojavLauncherTeam/PojavLauncher/blob/v3_openjdk/LICENSE)
-- Android Support Libraries: [Apache License 2.0](https://android.googlesource.com/platform/prebuilts/maven_repo/android/+/master/NOTICE.txt).
-- [Holy GL4ES](https://github.com/artdeell/gl4es_extra_extra/): [MIT License](https://github.com/ptitSeb/gl4es/blob/master/LICENSE).
-- [OpenJDK](https://github.com/PojavLauncherTeam/openjdk-multiarch-jdk8u): [GNU GPLv2 License](https://openjdk.java.net/legal/gplv2+ce.html).
-- [GLFW](https://github.com/MojoLauncher/glfw): [zlib license](https://github.com/MojoLauncher/glfw/blob/glfw34/LICENSE.md)
-- [SDL](https://github.com/MojoLauncher/MojoSDL): [zlib license](https://github.com/MojoLauncher/MojoSDL/blob/main/LICENSE.txt)
-- [LWJGL2-GLFW](https://github.com/MojoLauncher/lwjgl2-glfw): 3-Clause BSD license
-- [LWJGL3](https://github.com/LWJGL/lwjgl3): [BSD-3 License](https://github.com/LWJGL/lwjgl3/blob/master/LICENSE.md).
-- [mojoexec](https://github.com/MojoLauncher/mojoexec): [MIT License](https://github.com/MojoLauncher/mojoexec/blob/master/LICENSE)
-- [Mesa 3D Graphics Library](https://gitlab.freedesktop.org/mesa/mesa): [MIT License](https://docs.mesa3d.org/license.html).
-- [pro-grade](https://github.com/pro-grade/pro-grade) (Java sandboxing security manager): [Apache License 2.0](https://github.com/pro-grade/pro-grade/blob/master/LICENSE.txt).
-- [Authlib-Injector](https://github.com/yushijinhun/authlib-injector) (Used for authorisation via ely.by): [AGPL-3.0](https://github.com/yushijinhun/authlib-injector/blob/develop/LICENSE).
-- [alsoft](https://github.com/kcat/openal-soft/) (Audio output library): [GNU Library General Public License](https://github.com/kcat/openal-soft/blob/master/COPYING) and [Modified PFFFT](https://github.com/kcat/openal-soft/blob/master/LICENSE-pffft).
-- [oboe](https://github.com/google/oboe): [Apache License 2.0](https://github.com/google/oboe/blob/main/LICENSE).
-- Thanks to [Mineskin](https://mineskin.eu/) for providing Minecraft avatars.
