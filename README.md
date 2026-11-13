@@ -1,20 +1,29 @@
-<H1 align="center">BlueJavaLaunch 🔵</H1>
+Here is the fully polished, updated README.md for your repo (ImNotNur/bluejavalaunch) incorporating your new icon concept, your custom branding, and the electric blue theme:
+<div align="center">
+  <h1>BlueJavaLaunch 🔵</h1>
+  <p>
+    <b>Minecraft: Java Edition on Android, finally designed for actual humans (and not just Linux terminal wizards).</b>
+  </p>
 
-<p align="center">
-  <b>Minecraft: Java Edition on Android, finally designed for actual humans (and not just Linux terminal wizards).</b>
-</p>
+  <img src="app_mojo/src/main/assets/bluejavalaunch_icon.png" width="140" height="140" alt="BlueJavaLaunch Logo" style="border-radius: 24px;">
 
-<img src="./app_mojo/src/main/assets/bluejavalaunch.png" align="left" width="150" height="150" alt="BlueJavaLaunch logo">
+  <br><br>
 
-[![Build APK](https://github.com/ImNotNur/bluejavalaunch/actions/workflows/build-apk.yml/badge.svg)](https://github.com/ImNotNur/bluejavalaunch/actions)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ImNotNurgamingYT/BlueJavaLaunch)](https://github.com/ImNotNur/bluejavalaunch/commits)
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+  <a href="https://www.gnu.org/licenses/lgpl-3.0">
+    <img src="https://img.shields.io/badge/License-LGPL_v3-0066FF?style=for-the-badge" alt="License: LGPL v3">
+  </a>
+  <img src="https://img.shields.io/badge/Platform-Android-0066FF?style=for-the-badge&logo=android&logoColor=white" alt="Platform: Android">
+  <img src="https://img.shields.io/badge/Controls-Bedrock_Touch-0066FF?style=for-the-badge" alt="Bedrock Touch Controls">
+</div>
+
+<br>
 
 * **BlueJavaLaunch** is a clean, user-friendly fork of [MojoLauncher](https://github.com/MojoLauncher/MojoLauncher) (which is based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)) that lets you play Minecraft: Java Edition on your Android phone or tablet without needing a computer science degree just to configure your settings.
 * Tired of mobile launchers looking like a 2004 nuclear reactor control panel—or constantly beefing with each other? Same. So we went full xkcd #927 and made another one. Except this one actually makes sense.
 * Runs everything from ancient `rd-132211` builds up to the latest snapshots, with easy support for **Fabric**, **Forge**, **NeoForge**, and **OptiFine**—plus out-of-the-box **Bedrock-style touch controls** so your thumbs don't file a restraining order against you.
 
-## Navigation
+---
+
 - [Why BlueJavaLaunch?](#why-bluejavalaunch)
 - [Getting BlueJavaLaunch](#getting-bluejavalaunch)
 - [Building](#building)
@@ -24,24 +33,30 @@
 - [Contributing](#contributing)
 - [Credits & Third-Party Components](#credits--third-party-components)
 
+---
+
 ## Why BlueJavaLaunch?
 * **Zero Jargon by Default:** No more getting jump-scared by `MALLOC_ARENA_MAX` or obscure renderer acronyms on your first boot. BlueJavaLaunch automatically detects your device's RAM and GPU to pick optimal settings silently in the background. *(Don't worry, power users—all the raw JVM flags and renderer toggles are still waiting for you behind the **Nerd Mode** switch).*
 * **Bedrock-Styled Touch Controls:** Built-in dynamic floating joystick and clean touch layouts that actually feel natural on a touchscreen.
 * **Human Error Messages:** If something crashes, we tell you what actually went wrong in plain English instead of throwing a 500-line Java stack trace at your face and wishing you good luck.
 * **Blue > Everything:** Clean, uncluttered, electric-blue UI that respects your screen space.
 
+---
+
 ## Getting BlueJavaLaunch
 
 You can grab BlueJavaLaunch in three ways:
 
-1. **Releases (Recommended):** Download the latest stable APK from the [Releases page](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/releases).
-2. **Bleed-Edge Builds:** Grab fresh automated builds straight from [GitHub Actions](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/actions) (click the latest green workflow run and scroll down to **Artifacts**).
+1. **Releases (Recommended):** Download the latest stable APK from the [Releases page](https://github.com/ImNotNur/bluejavalaunch/releases).
+2. **Bleed-Edge Builds:** Grab fresh automated builds straight from [GitHub Actions](https://github.com/ImNotNur/bluejavalaunch/actions) (click the latest green workflow run and scroll down to **Artifacts**).
 3. **Build it Yourself:** Follow the [Building](#building) guide below if you enjoy watching Gradle progress bars.
 
+---
+
 ## Building
-Make sure you clone with `--recursive` so the native C/C++ submodules don't go missing:
-git clone --recursive [https://github.com/ImNotNurgamingYT/BlueJavaLaunch.git](https://github.com/ImNotNurgamingYT/BlueJavaLaunch.git)
-cd BlueJavaLaunch
+Make sure you clone with `--recursive` so the native C/C++ submodules don't go missing
+git clone --recursive [https://github.com/ImNotNur/bluejavalaunch.git](https://github.com/ImNotNur/bluejavalaunch.git)
+cd bluejavalaunch
 ./gradlew :app_mojo:assembleDebug
 
 If you are building on Windows:
@@ -81,5 +96,4 @@ Huge shoutout to the MojoLauncher and PojavLauncher teams for doing all the heav
  * alsoft: GNU LGPL and Modified PFFFT
  * oboe: Apache License 2.0
  * Thanks to Mineskin for providing Minecraft avatars.
- * This is vibecoded lol but temporarily
 
