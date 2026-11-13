@@ -6,8 +6,8 @@
 
 <img src="./app_mojo/src/main/assets/bluejavalaunch.png" align="left" width="150" height="150" alt="BlueJavaLaunch logo">
 
-[![Build APK](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/actions/workflows/build-apk.yml/badge.svg)](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/actions)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ImNotNurgamingYT/BlueJavaLaunch)](https://github.com/ImNotNurgamingYT/BlueJavaLaunch/commits)
+[![Build APK](https://github.com/ImNotNur/bluejavalaunch/actions/workflows/build-apk.yml/badge.svg)](https://github.com/ImNotNur/bluejavalaunch/actions)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ImNotNurgamingYT/BlueJavaLaunch)](https://github.com/ImNotNur/bluejavalaunch/commits)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 * **BlueJavaLaunch** is a clean, user-friendly fork of [MojoLauncher](https://github.com/MojoLauncher/MojoLauncher) (which is based on [PojavLauncher](https://github.com/PojavLauncherTeam/PojavLauncher)) that lets you play Minecraft: Java Edition on your Android phone or tablet without needing a computer science degree just to configure your settings.
