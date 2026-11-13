@@ -1,4 +1,4 @@
-Name: Android CI
+name: Android CI
 
 on:
   push:
@@ -76,5 +76,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-debug-noruntime
-          path: out/app-debug-noruntime.md5
           path: out/app-debug-noruntime.apk
