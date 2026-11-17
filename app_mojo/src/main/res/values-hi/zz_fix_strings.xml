@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="memory_warning_msg">मौजूदा उपलब्ध RAM (%1$d) आवंटित RAM (%2$d) से कम है, जिससे गेम क्रैश हो सकता है।</string>
+    <string name="address_memory_warning_msg">मौजूदा उपलब्ध एड्रेसेबल RAM स्पेस (%1$d) आवंटित RAM (%2$d) से कम है, जिससे गेम क्रैश हो सकता है।</string>
+    <string name="mcl_launch_downloading_progress">"%1$s डाउनलोड हो रहा है (%2$.2f MB / %3$.2f MB)"</string>
+    <string name="modpack_download_downloading_mods_fc">मॉड्स डाउनलोड हो रहे हैं (फ़ाइल %1$d/%2$d)</string>
+    <string name="newdl_downloading_game_files">गेम डाउनलोड हो रहा है… (%1$d/%2$d, %3$.2f MB/s)</string>
+    <string name="newdl_downloading_game_files_size">गेम डाउनलोड हो रहा है… (%1$.2f/%2$.2f MB, %3$.2f MB/s)</string>
+    <string name="newdl_extracting_native_libraries">नेटिव लाइब्रेरीज़ निकाली जा रही हैं (%1$d/%2$d)</string>
+    <string name="mcl_setting_subtitle_javaargs">JVM लॉन्च आर्ग्यूमेंट्स को संभालें। इसे बदलते समय सावधानी रखें, नहीं तो गेम क्रैश हो सकता है.</string>
+</resources>
