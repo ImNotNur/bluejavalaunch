@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="memory_warning_msg">Your free RAM (%1$d MB) is lower than what you assigned (%2$d MB). Might wanna lower it if the game starts crashing.</string>
+    <string name="address_memory_warning_msg">Free addressable RAM space (%1$d) is lower than allocated RAM (%2$d). Expect crashes unless you lower the allocation.</string>
+    <string name="mcl_launch_downloading_progress">Downloading %1$s (%2$.2f MB / %3$.2f MB)</string>
+    <string name="modpack_download_downloading_mods_fc">Downloading mods (File %1$d of %2$d)</string>
+    <string name="newdl_downloading_game_files">Downloading game files… (%1$d/%2$d, %3$.2f MB/s)</string>
+    <string name="newdl_downloading_game_files_size">Downloading game files… (%1$.2f/%2$.2f MB, %3$.2f MB/s)</string>
+    <string name="newdl_extracting_native_libraries">Extracting native libraries (%1$d/%2$d)…</string>
+    <string name="mcl_setting_subtitle_javaargs">Tinker with raw Java flags. Do not break it, or the game will cry.</string>
+</resources>
